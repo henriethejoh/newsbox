@@ -10,8 +10,8 @@ module.exports = {
 		template: path.resolve(__dirname, "src", "index.html")
 	}),
 	new HtmlWebpackPlugin({
-		template: path.resolve(__dirname, "src", "html", "article.html"),
-		filename: "article.html"
+		template: path.resolve(__dirname, "src", "html", "archive.html"),
+		filename: "archive.html"
 	})],
 	module: {
 		rules: [

@@ -6,31 +6,58 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Henriethes NewsBox</title>
 	<link rel="stylesheet" href="./main.css">
+	<script src="https://kit.fontawesome.com/5c519ba30f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+	<header>
+		<nav class="navbar">
+			<ul class="navbar__list">
+				<li class="navbar__list--item"><i class="fa-solid fa-inbox"></i></li>
+				<li class="navbar__list--item">newsbox</li>
+				<li class="navbar__list--item"><i class="fa-solid fa-gear"></i></li>
+			</ul>
+		</nav>
+		<form class="searchForm" action="#">
+			<input class="searchFrom__input" type="text" placeholder="search news">
+			<button class="searchForm__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+		</form>
+	</header>
 	<main>
-		<ul class="list">
-			<li>
-				<p class="category__list">world</p>
-				<ul class="list__items">
-					<li></li>
+		<ul class="headline">
+			<li class="headline__world">
+				<p class="headline__world--button"><i class="fa-solid fa-earth-europe"></i>world<span><i class="fa-solid fa-angle-down"></i></span></p>
+				<ul class="headline__world--list" style="display: none;">
 				</ul>
 			</li>
-			<li>
-				<p class="category__list">sport</p>
-				<ul class="list__items">
-					<li></li>
+			<li class="headline__travel">
+				<p class="headline__travel--button"><i class="fa-solid fa-map-location-dot"></i>travel<span><i class="fa-solid fa-angle-down"></i></span></p>
+				<ul class="headline__travel--list" style="display: none;">
 				</ul>
 			</li>
-			<li>
-				<p class="category__list">travel</p>
-				<ul class="list__items">
-					<li></li>
+			<li class="headline__arts">
+				<p class="headline__arts--button"><i class="fa-solid fa-palette"></i>arts<span><i class="fa-solid fa-angle-down"></i></span></p>
+				<ul class="headline__arts--list" style="display: none;">
+				</ul>
+			</li>
+			<li class="headline__food">
+				<p class="headline__food--button"><i class="fa-solid fa-champagne-glasses"></i>food<span><i class="fa-solid fa-angle-down"></i></span></p>
+				<ul class="headline__food--list" style="display: none;">
+				</ul>
+			<li class="headline__fashion">
+				<p class="headline__fashion--button"><i class="fa-solid fa-user-tie"></i>fashion<span><i class="fa-solid fa-angle-down"></i></span></p>
+				<ul class="headline__fashion--list" style="display: none;">
+				</ul>
+			</li>
+			<li class="headline__theater">
+				<p class="headline__theater--button"><i class="fa-solid fa-masks-theater"></i>theater<span><i class="fa-solid fa-angle-down"></i></span></p>
+				<ul class="headline__theater--list" style="display: none;">
 				</ul>
 			</li>
 		</ul>
 	</main>
+	<footer>
+	</footer>
 </body>
 
 </html>

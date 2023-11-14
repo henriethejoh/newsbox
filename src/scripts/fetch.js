@@ -1,88 +1,104 @@
 // https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=OYqBSK4vpUhaipVjzAfR4CDSSckHz5Y2
+import getArticlesByCategory from "./getArticlesByCategory"
 
-const dropDown = document.querySelector(".category__list")
-const list = document.querySelector(".list__items")
+const worldDropDown = document.querySelector(".headline__world--button")
+const worldList = document.querySelector(".headline__world--list")
+let worldHasBeenClicked = false
 
-dropDown.addEventListener("click", () => {
-    if (list.style.display === "none") {
-        list.style.display = "block"
-    } else {
-        list.style.display = "none"
+worldDropDown.addEventListener("click", () => {
+        if (!worldHasBeenClicked) {
+        worldHasBeenClicked = true
+
     }
-    fetch("https://api.nytimes.com/svc/topstories/v2/world.json?api-key=OYqBSK4vpUhaipVjzAfR4CDSSckHz5Y2")
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (data) {
-            data.results.forEach(element => {
-                const LI = document.createElement("li")
-                const UL = document.querySelector(".list__items")
-                LI.innerHTML = `
-            <h2>
-                ${element.title}
-            </h2>
-            <p>
-            ${element.abstract}
-            </p>
-            `
-                UL.append(LI)
-            })
-        })
-
+    if (worldList.style.display === "none") {
+        worldList.style.display = "block"
+    } else {
+        worldList.style.display = "none"
+    }  
+        getArticlesByCategory("world")
 })
 
-dropDown.addEventListener("click", () => {
-    if (list.style.display === "none") {
-        list.style.display = "block"
-    } else {
-        list.style.display = "none"
-    }
-    fetch("https://api.nytimes.com/svc/topstories/v2/world.json?api-key=OYqBSK4vpUhaipVjzAfR4CDSSckHz5Y2")
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (data) {
-            data.results.forEach(element => {
-                const LI = document.createElement("li")
-                const UL = document.querySelector(".list__items")
-                LI.innerHTML = `
-            <h2>
-                ${element.title}
-            </h2>
-            <p>
-            ${element.abstract}
-            </p>
-            `
-                UL.append(LI)
-            })
-        })
+const travelDropDown = document.querySelector(".headline__travel--button")
+const travelList = document.querySelector(".headline__travel--list")
+let travelHasBeenClicked = false
 
+travelDropDown.addEventListener("click", () => {
+        if (!travelHasBeenClicked) {
+        travelHasBeenClicked = true
+
+    }
+    if (travelList.style.display === "none") {
+        travelList.style.display = "block"
+    } else {
+        travelList.style.display = "none"
+    }  
+        getArticlesByCategory("travel")
 })
 
-dropDown.addEventListener("click", () => {
-    if (list.style.display === "none") {
-        list.style.display = "block"
-    } else {
-        list.style.display = "none"
-    }
-    fetch("https://api.nytimes.com/svc/topstories/v2/sport.json?api-key=OYqBSK4vpUhaipVjzAfR4CDSSckHz5Y2")
-        .then(function (response) {
-            return response.json()
-        })
-        .then(function (data) {
-            data.results.forEach(element => {
-                const LI = document.createElement("li")
-                const UL = document.querySelector(".list__items")
-                LI.innerHTML = `
-            <h2>
-                ${element.title}
-            </h2>
-            <p>
-            ${element.abstract}
-            </p>
-            `
-                UL.append(LI)
-            })
-        })
+const artsDropDown = document.querySelector(".headline__arts--button")
+const artsList = document.querySelector(".headline__arts--list")
+let artsHasBeenClicked = false
 
+artsDropDown.addEventListener("click", () => {
+        if (!artsHasBeenClicked) {
+        artsHasBeenClicked = true
+
+    }
+    if (artsList.style.display === "none") {
+        artsList.style.display = "block"
+    } else {
+        artsList.style.display = "none"
+    }  
+        getArticlesByCategory("arts")
+})
+
+const foodDropDown = document.querySelector(".headline__food--button")
+const foodList = document.querySelector(".headline__food--list")
+let foodHasBeenClicked = false
+
+foodDropDown.addEventListener("click", () => {
+        if (!foodHasBeenClicked) {
+        foodHasBeenClicked = true
+
+    }
+    if (foodList.style.display === "none") {
+        foodList.style.display = "block"
+    } else {
+        foodList.style.display = "none"
+    }  
+        getArticlesByCategory("food")
+})
+
+const fashionDropDown = document.querySelector(".headline__fashion--button")
+const fashionList = document.querySelector(".headline__fashion--list")
+let fashionHasBeenClicked = false
+
+fashionDropDown.addEventListener("click", () => {
+        if (!fashionHasBeenClicked) {
+        fashionHasBeenClicked = true
+
+    }
+    if (fashionList.style.display === "none") {
+        fashionList.style.display = "block"
+    } else {
+        fashionList.style.display = "none"
+    }  
+        getArticlesByCategory("fashion")
+})
+
+const theaterDropDown = document.querySelector(".headline__theater--button")
+const theaterList = document.querySelector(".headline__theater--list")
+let theaterHasBeenClicked = false
+
+theaterDropDown.addEventListener("click", () => {
+        if (!theaterHasBeenClicked) {
+            theaterHasBeenClicked = true
+
+    }
+    if (theaterList.style.display === "none") {
+        theaterList.style.display = "block"
+    } else {
+        theaterList.style.display = "none"
+    }  
+        getArticlesByCategory("theater")
 })
