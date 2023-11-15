@@ -1,5 +1,5 @@
 // https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=OYqBSK4vpUhaipVjzAfR4CDSSckHz5Y2
-import getArticlesByCategory from "./getArticlesByCategory"
+import getArticlesByCategory from "./getArticlesByCategory" //henter funktionen som gjør at kategoriene skifter
 
 const worldDropDown = document.querySelector(".headline__world--button")
 const worldList = document.querySelector(".headline__world--list")
@@ -49,7 +49,7 @@ artsDropDown.addEventListener("click", () => {
     } else {
         artsList.style.display = "none"
     }  
-        getArticlesByCategory("arts")
+        getArticlesByCategory("arts") 
 })
 
 const foodDropDown = document.querySelector(".headline__food--button")
