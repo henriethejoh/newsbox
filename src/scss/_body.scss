@@ -1,0 +1,12 @@
+body{
+    --bodyBackgroundColor: var(--secondary-ice);
+    --textColor: var(--primary-drab);
+}
+body.darkmode{
+    --bodyBackgroundColor: var(--primary-drab);
+    --textColor: var(--secondary-sand);
+    }
+
+body {
+    background-color: var(--bodyBackgroundColor);
+}

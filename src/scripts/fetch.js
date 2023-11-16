@@ -1,6 +1,10 @@
 // https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=OYqBSK4vpUhaipVjzAfR4CDSSckHz5Y2
 import getArticlesByCategory from "./getArticlesByCategory" //henter funktionen som gjør at kategoriene skifter
 
+export default (function() {
+    if (!window.location.href.includes("index.html")) return
+
+
 const worldDropDown = document.querySelector(".headline__world--button")
 const worldList = document.querySelector(".headline__world--list")
 let worldHasBeenClicked = false
@@ -102,3 +106,4 @@ theaterDropDown.addEventListener("click", () => {
     }  
         getArticlesByCategory("theater")
 })
+})()
