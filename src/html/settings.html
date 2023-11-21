@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <title>Settings</title>
 </head>
-<body class="darkmode">
+
+<body>
     <main>
         <ul>
-            <li>world</li><button></button>
-            <li>travel</li><button></button>
-            <li>arts</li><button></button>
-            <li>food</li><button></button>
-            <li>fashion</li><button></button>
-            <li>theater</li><button></button>
-        </ul>
-
+            <li>
+                world
+                <label class="switch">
+                    <input type="checkbox" data-category="world">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li>
+                travel
+                <label class="switch">
+                    <input type="checkbox" data-category="travel">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li>
+                arts
+                <label class="switch">
+                    <input type="checkbox" data-category="arts">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li>
+               food
+                <label class="switch">
+                    <input type="checkbox" data-category="food">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li>
+                fashion
+                <label class="switch">
+                    <input type="checkbox" data-category="fashion">
+                    <span class="slider round"></span>
+                </label>
+            </li>
+            <li>
+                theater
+                <label class="switch">
+                    <input type="checkbox" data-category="theater">
+                    <span class="slider round"></span>
+                </label>
+            </li>
         <button class="activate_darkmode--btn">toggle darkmode</button>
     </main>
 </body>
+
 </html>

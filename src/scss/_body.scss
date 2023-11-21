@@ -2,7 +2,7 @@ body{
     --bodyBackgroundColor: var(--secondary-ice);
     --textColor: var(--primary-drab);
 }
-body.darkmode{
+.darkmode{
     --bodyBackgroundColor: var(--primary-drab);
     --textColor: var(--secondary-sand);
     }
