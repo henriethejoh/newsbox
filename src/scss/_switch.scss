@@ -1,0 +1,36 @@
+$light-grey: #C8D1D3;
+$white: #F0F3F4;
+$light-blue: #87BCBF;
+
+.toggle__switch{
+    display: flex;
+}
+
+.switch {
+    position: relative;
+    display: block;
+    height: 2em;
+    width: 3.5em;
+    background-color: $light-grey;
+    border-radius: 1em;
+
+    &__checkbox{
+        display: none;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0.15em;
+        left: 0.15em;
+        height: 1.7em;
+        width: 1.7em;
+        border-radius: 50%;
+        background-color: $white;
+    }
+}
+
+
+.switch__checkbox:checked + .switch:after{
+    left: 1.65em;
+}
